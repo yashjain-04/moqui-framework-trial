@@ -20,4 +20,15 @@
 
     <party.PartyContactMech partyId="100" contactMechId="CM1" fromDate="2026-02-03 12:00:00"/>
     <party.PartyContactMech partyId="100" contactMechId="CM2" fromDate="2026-02-03 12:00:00"/>
+
+    <moqui.security.ArtifactGroup artifactGroupId="PARTY_ADMIN" description="Party Admin Group"/>
+
+    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_ADMIN" artifactName="party\..*"
+                                        artifactTypeEnumId="AT_ENTITY" inheritAuthz="Y"/>
+
+    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_ADMIN" artifactName="component://party/screen/party/PartyScreen.xml"
+                                        artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y"/>
+
+    <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ADMIN_ALLOW" userGroupId="ADMIN"
+                                  artifactGroupId="PARTY_ADMIN" authzActionEnumId="AUTHZA_ALL" authzTypeEnumId="AUTHZT_ALLOW"/>
 </entity-facade-xml>
