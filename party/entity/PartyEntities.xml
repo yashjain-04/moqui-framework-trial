@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-3.0.xsd">
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1.xsd">
 
     <entity entity-name="Party" package="party">
         <field name="partyId" type="id" is-pk="true"/>
         <field name="partyTypeEnumId" type="id"/>
         <field name="createdDate" type="date-time"/>
         <relationship type="one" title="PartyType" related="moqui.basic.Enumeration">
-            <key-map field-name="partyTypeEnumId" relatedField-name="enumId"/>
+            <key-map field-name="partyTypeEnumId" related-field-name="enumId"/>
         </relationship>
     </entity>
 
@@ -36,7 +36,7 @@
         <field name="infoString" type="text-medium"/>
         <field name="createdDate" type="date-time"/>
         <relationship type="one" title="ContactMechType" related="moqui.basic.Enumeration">
-            <key-map field-name="contactMechTypeId" relatedField-name="enumId"/>
+            <key-map field-name="contactMechTypeId" related-field-name="enumId"/>
         </relationship>
     </entity>
 
