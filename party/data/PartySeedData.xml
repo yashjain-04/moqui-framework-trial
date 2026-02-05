@@ -31,4 +31,14 @@
 
     <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ADMIN_ALLOW" userGroupId="ADMIN"
                                   artifactGroupId="PARTY_ADMIN" authzActionEnumId="AUTHZA_ALL" authzTypeEnumId="AUTHZT_ALLOW"/>
+
+<!--    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_ADMIN"-->
+<!--                                        artifactName="/person"-->
+<!--                                        artifactTypeEnumId="AT_REST_PATH"-->
+<!--                                        inheritAuthz="Y"/>-->
+
+<!--    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_ADMIN"-->
+<!--                                        artifactName="party\.PartyServices\..*"-->
+<!--                                        artifactTypeEnumId="AT_SERVICE"-->
+<!--                                        inheritAuthz="Y"/>-->
 </entity-facade-xml>
