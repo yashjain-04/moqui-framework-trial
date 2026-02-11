@@ -40,7 +40,11 @@
 
             <container style="margin-top:20px;">
                 <form-list name="PartyListForm" list="partyList" skip-form="true">
-                    <field name="partyId"><default-field title="ID"><display/></default-field></field>
+                    <field name="partyId">
+                        <default-field title="ID">
+                            <display/>
+                        </default-field>
+                    </field>
                     <field name="partyTypeEnumId">
                         <default-field title="Type">
                             <display-entity entity-name="moqui.basic.Enumeration" key-field-name="enumId" text="${description}"/>
